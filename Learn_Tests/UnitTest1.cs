@@ -32,14 +32,17 @@ namespace Learn_Selenium
         public void SearchFor_Echo()
         {
 
-            for (int i = 0; i < 5; i++)
+            for (int i=1;i<4;i++)
+               
             {
+
                 chrome.FindElement(By.Id("lst-ib")).SendKeys(x.ExcelSetup(i, 1));
                 chrome.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
-            }
+                chrome.FindElement(By.Id("lst-ib")).Clear();
 
-           
-            
+            }
+                
+
         }
         [Test, Order(4)]
         public void Lookfor_Ahmed()
